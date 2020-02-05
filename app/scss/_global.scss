@@ -31,17 +31,16 @@ body {
 }
 
 body {
-	font-family: "Muli", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 24px;
-	color: $text;
+	font-size: 16px;
+	line-height: 32px;
+	color: $text-color;
 }
 
 a {
 	display: inline-block;
 	text-decoration: none;
-	color: $text;
 }
 
 ul,
@@ -52,7 +51,7 @@ li {
 }
 
 .container {
-	max-width: 1170px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -60,4 +59,56 @@ li {
 .container-fluid {
 	max-width: 1920px;
 	margin: 0 auto;
+}
+
+//slider
+.slick {
+	&-arrow {
+		position: absolute;
+		top: 50%;
+		border: solid 2px rgba(#b3dbc8, .56);
+		border-radius: 50%;
+		background-color: transparent;
+		font-size: 0;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		&:hover {
+			background-color: rgba(#b3dbc8, 0.2);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			color: rgba(#b3dbc8, 0.56);
+			font-family: "icomoon";
+			font-size: 20px;
+		}
+	}
+	&-prev {
+		left: -100px;
+		&::before {
+			content: "\f104";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&-next {
+		right: -100px;
+		&::before {
+			content: "\f105";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.price-title,
+.price__item-link a {
+	color: #fff;
+	font-weight: 500;
+	font-size: 22px;
+	letter-spacing: 1px;
+	padding: 5px 0;
 }

@@ -4,25 +4,189 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Start HTML</title>
+	<title>Flate Mate</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:100,100i,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-	<div class="wrapper">
+	<div class="wrapper container-fluid">
 		<div class="content">
 			
-			<!-- content -->
+			<header class="header" style="background-image: url(img/header-bg.jpg);">
+				<div class="container">
+					<div class="header__top">
+						<div class="header__logo">
+							<img src="img/logo.png" alt="">
+						</div> <!-- header__logo -->
+						<div class="header__login">
+							<span class="header__login-description">Have an Account?</span>
+							<a href="#" class="header__login-link">login</a>
+						</div> <!-- header__login -->
+					</div> <!-- header__top -->
+					<div class="header__banner">
+						<div class="header__content">
+							<div class="header__content-title">Lorem ipsum dolor sit amet</div>
+							<div class="header__content-text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							</div>
+							<a href="" class="header__content-link">Read More</a>
+						</div> <!-- header__content -->
+						<div class="header__content-image">
+							<img src="img/icons/icon-header.png" alt="">
+						</div> <!-- header__image -->
+					</div> <!-- header__banner -->
+				</div> <!-- container -->
+			</header> <!-- header -->
 
-		</div>
+			<section class="about">
+				<div class="container">
+					<div class="about__inner">
+						<div class="about__image">
+							<img src="img/icons/icon-about.png" alt="">
+						</div>
+						<div class="about__content">
+							<div class="about__content-title">Lorem ipsum dolor sit amet</div>
+							<div class="about__content-text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+						<div class="about__social">
+							<a class="pinterest" href="#"></a>
+							<a class="facebook" href="#"></a>
+						</div>
+					</div> <!-- about__inner -->
+				</div> <!-- container -->
+			</section> <!-- about -->
+			
+			<section class="slider">
+				<div class="container">
+					<div class="slider__inner">
+						<div class="slider__item">
+							<div class="slider__item-title">The Modern Era of Web Designing </div>
+							<div class="slider__item-subtitle">We make wireframe ultra fast,leak proof</div>
+							<div class="slider__item-image">
+								<img src="img/slider-img.png" alt="">
+							</div>
+						</div> <!-- slider__item -->
+						<div class="slider__item">
+							<div class="slider__item-title">The Modern Era of Web Designing </div>
+							<div class="slider__item-subtitle">We make wireframe ultra fast,leak proof</div>
+							<div class="slider__item-image">
+								<img src="img/slider-img.png" alt="">
+							</div>
+						</div> <!-- slider__item -->
+						<div class="slider__item">
+							<div class="slider__item-title">The Modern Era of Web Designing </div>
+							<div class="slider__item-subtitle">We make wireframe ultra fast,leak proof</div>
+							<div class="slider__item-image">
+								<img src="img/slider-img.png" alt="">
+							</div>
+						</div> <!-- slider__item -->
+					</div> <!-- slider__inner -->
+				</div> <!-- container -->			
+			</section> <!-- slider -->
+
+			<section class="price">
+				<div class="container">
+					<div class="price__title">A wireframe is the primitive skeleton of your website.</div>
+					<div class="price__description">
+						Pick a plan from below to get started! Already 20000+ websites and webprojects have been successfully wireframed with HotGloo.
+					</div> <!-- price__description -->
+					<div class="price__inner">
+						<div class="price__item free">
+							<div class="price__item-title price-title">Free</div>
+							<ul class="price__item-list">
+								<li class="month-price">$0/Month</li>
+								<li>1 Project</li>
+								<li>5 Members</li>
+								<li>5 GB</li>
+							</ul>
+							<div class="price__item-link">
+								<a href="#">Buy Now</a>
+							</div>
+						</div> <!-- price__item -->
+						<div class="price__item professional">
+							<div class="price__item-title price-title">Free <span></span></div>
+							<ul class="price__item-list">
+								<li class="month-price">$50/Month</li>
+								<li>20 Project</li>
+								<li>50 Members</li>
+								<li>100 GB</li>
+							</ul>
+							<div class="price__item-link">
+								<a href="#">Buy Now</a>
+							</div>
+						</div> <!-- price__item -->
+						<div class="price__item enterprice">
+							<div class="price__item-title price-title">Free</div>
+							<ul class="price__item-list">
+								<li class="month-price">$90/Month</li>
+								<li>Unlimited</li>
+								<li>Unlimited</li>
+								<li>500 GB</li>
+							</ul>
+							<div class="price__item-link">
+								<a href="#">Buy Now</a>
+							</div>
+						</div> <!-- price__item -->
+					</div> <!-- price__inner -->
+				</div> <!-- container -->
+			</section> <!-- price -->
+
+			<section class="video">
+				<div class="container">
+					<div class="video__title">A wireframe is the primitive skeleton of your website.</div>
+					<div class="video__content">
+						<img src="img/video-bg.jpg" alt="">
+					</div> <!-- video__content -->
+				</div> <!-- container -->
+			</section> <!-- video -->
+
+			<section class="contact">
+				<div class="container">
+					<div class="contact__image">
+						<img src="img/icons/icon-contact.png" alt="">
+					</div>
+					<div class="contact__form">
+						<form>
+							<div class="contact__form-inner">
+								<div class="contact__form-name">
+									<label for="name">Name<sup>*</sup></label>
+									<input type="text" id="name">
+									<label for="email">E-mail<sup>*</sup></label>
+									<input type="text" id="email">
+								</div>
+								<div class="contact__form-text">
+									<label for="message">Message<sup>*</sup></label>
+									<textarea id="message"></textarea>
+								</div>
+							</div>
+							<button type="submit">send</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		</div> <!-- content -->
 		<div class="footer">
-
-			<!-- footer -->
-
-		</div>
-	</div>
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__logo">
+						<img src="img/logo.png" alt="">
+						<div class="footer__text">
+							<span>|</span> <span>Designed By WWW. CSSAUTHOR.COM</span>
+						</div>
+					</div>
+					<div class="footer__social">
+						<a class="footer__social-twitter" href="#"></a>
+						<a class="footer__social-facebook" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div> <!-- footer -->
+	</div> <!-- wrapper -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>

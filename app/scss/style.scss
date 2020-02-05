@@ -3,6 +3,513 @@
 @import "fonts";
 @import "global";
 
+/*===================================================================================================
+======================================    header    =================================================
+===================================================================================================*/
+
+.header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 30px 0 100px;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 150px;
+	}
+	&__logo {
+		img {
+			width: 150px;
+		}
+	}
+	&__login {
+		&-description {
+			color: #c9ced7;
+			font-weight: 100;
+			font-style: italic;
+			margin-right: 20px;
+			display: inline-block;
+		}
+		&-link {
+			color: #cad1db;
+			text-transform: uppercase;
+			padding: 5px 15px;
+			background-color: #3d4b60;
+			border-radius: 10px;
+			transition: all .3s;
+			&:hover {
+				background-color: #2f3846;
+			}
+		}
+	}
+	&__banner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content {
+		&-title  {
+			color: #fff;
+			font-family: "Roboto Slab", serif;
+			font-size: 32px;
+			margin-bottom: 40px;
+		}
+		&-text {
+			color: #c5d2e5;
+			max-width: 400px;
+			margin-bottom: 40px;
+		}
+		&-link {
+			background-color: $green-color;
+			color: #fff;
+			font-size: 20px;
+			padding: 8px 30px;
+			border-radius: 5px;
+			transition: all .3s;
+			&:hover {
+				background-color: #56a07d;
+			}
+		}
+		&-image {
+			img {
+				width: 300px;
+				margin-right: 200px;
+			}
+		}
+	}
+}
+
+/*===================================================================================================
+=======================================    about    =================================================
+===================================================================================================*/
+
+.about {
+	background-color: $bg-color;
+	padding: 80px 0;
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 80px;
+	}
+	&__image {
+		max-width: 200px;
+		width: 100%;
+		img {
+			width: 200px;
+		}
+	}
+	&__content {
+		max-width: 480px;
+		width: 100%;
+		&-title {
+			font-family: "Roboto Slab", serif;
+			font-size: 28px;
+			color: $title-color;
+			margin-bottom: 30px;
+		}
+		&-text {
+			text-align: justify;
+		}
+	}
+	&__social {
+		max-width: 50px;
+		width: 100%;
+		a {
+			width: 50px;
+			height: 50px;
+			border: 2px solid $green-color;
+			border-radius: 50%;
+			position: relative;
+			transition: all .3s;
+			&:hover {
+				background-color: $green-color;
+				&::after {
+					color: #fff;
+				}
+			}
+			&.pinterest {
+				&::after {
+					content: "\f040";
+				}
+			}
+			&.facebook {
+				&::after {
+					content: "\f09a";
+				}
+			}
+			&::after {
+				content: "";
+				font-family: "icomoon";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				color: $green-color;
+				font-size: 22px;
+				transform: translate(-50%, -50%);
+			}
+			& + a {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+/*===================================================================================================
+=======================================    slider    ================================================
+===================================================================================================*/
+
+.slider {
+	background-color: $green-color;
+	color: #fff;
+	padding-top: 80px;
+	&__inner {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	&__item {
+		&-title {
+			font-size: 36px;
+			font-weight: 500;
+			max-width: 580px;
+			margin: 0 auto;
+			margin-bottom: 10px;
+		}
+		&-subtitle {
+			font-weight: 100;
+			font-size: 20px;
+			max-width: 580px;
+			margin: 0 auto 70px;
+		}
+		&-image {
+			img {
+				max-width: 1000px;
+				display: block;
+			}
+		}
+	}
+}
+
+/*===================================================================================================
+========================================    price    ================================================
+===================================================================================================*/
+
+.price {
+	background-color: $bg-color;
+	padding: 80px 0;
+	text-align: center;
+	&__title {
+		font-size: 28px;
+		color: $title-color;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	&__description {
+		color: #858b93;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: center;
+	}
+	&__item {
+		max-width: 250px;
+		width: 100%;
+		margin: 0 30px;
+		&.free {
+			.price__item-title,
+			.price__item-link {
+				background-color: #4b596c;
+			}
+			.price__item-list {
+				background-color: #e9eef3;
+				margin-bottom: 40px;
+				li {
+					color: #6d737b;
+					&.month-price {
+						font-weight: 700;
+						color: #6d737b;
+					}
+				}
+			}
+		}
+		&.professional {
+			.price__item-title {
+				position: relative;
+				span {
+					display: block;
+					position: absolute;
+					width: 30px;
+					height: 30px;
+					right: -10px;
+					top: -10px;
+					background-color: #f7ca52;
+					border-radius: 50%;
+					&::before {
+						content: "\f00c";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						color: #fff;
+						font-family: "icomoon";
+						font-size: 14px;
+						transform: translate(-50%, -50%);
+					}
+				}
+			}
+			.price__item-title,
+			.price__item-link {
+				background-color: $green-color;
+			}
+			.price__item-list {
+				background-color: #deebde;
+				margin-bottom: 40px;
+				li {
+					color: #6d737b;
+					&.month-price {
+						font-weight: 700;
+						color: $green-color;
+					}
+				}
+			}
+		}
+		&.enterprice {
+			.price__item-title,
+			.price__item-link {
+				background-color: #52a1ad;
+			}
+			.price__item-list {
+				background-color: #deebde;
+				margin-bottom: 40px;
+				li {
+					color: #6d737b;
+					&.month-price {
+						font-weight: 700;
+						color: #52a1ad;
+					}
+				}
+			}
+		}
+		&-list {
+			padding: 20px 0;
+			li {
+				& + li {
+					margin-top: 30px;
+				}
+			}
+			
+		}
+		&-link {
+			cursor: pointer;
+			transition: all .3s;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
+
+/*===================================================================================================
+========================================    video    ================================================
+===================================================================================================*/
+
+.video {
+	background-color: #e9eaed;
+	padding: 80px 0;
+	&__title {
+		margin-bottom: 80px;
+		font-size: 28px;
+		text-align: center;
+		color: $title-color;
+		font-weight: 500;
+	}
+	&__content {
+		position: relative;
+		&:hover {
+			&::before {
+				color: rgba(#deb0b0, 1);
+			}
+		}
+		&::before {
+			content: "\f01d";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-family: "icomoon";
+			font-size: 80px;
+			color: rgba(#deb0b0, .6);
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+		}
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+}
+
+/*===================================================================================================
+========================================    contact    ==============================================
+===================================================================================================*/
+
+.contact {
+	background-color: #2d3136;
+	padding: 80px 0;
+	color: #d7d7d7;
+	font-weight: 500;
+	&__image {
+		text-align: center;
+		margin-bottom: 80px;
+		img {
+			max-width: 150px;
+		}
+	}
+	&__form {
+		form {
+			max-width: 780px;
+			margin: auto;
+		}
+		&-inner {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 30px;
+		}
+		&-name,
+		&-text {
+			max-width: 350px;
+			width: 100%;
+		}
+		label {
+			font-size: 22px;
+			display: block;
+			margin-bottom: 15px;
+			sup {
+				color: #be393b;
+				font-size: 22px;
+			}
+		}
+		input,
+		textarea {
+			height: 50px;
+			width: 100%;
+			font-weight: 100;
+			font-size: 20px;
+			border-radius: 5px;
+			border: solid 1px #4c4f53;
+			background-color: #2e3237;
+			outline: none;
+			color: #d7d7d7;
+			padding: 10px;
+			&:focus {
+				border-color: #be393b;
+			}
+			&#name {
+				margin-bottom: 40px;
+			}
+		}
+		textarea {
+			resize: none;
+			min-height: 190px;
+		}
+	}
+	button {
+		margin-left: calc(100% - 120px);
+		height: 50px;
+		width: 120px;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: #be393b;
+		color: #fff;
+		border-radius: 5px;
+		border: none;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all .3s;
+		&:hover {
+			background-color: #e84346;
+		}
+	}
+}
+
+/*===================================================================================================
+========================================    footer    ===============================================
+===================================================================================================*/
+
+.footer {
+	padding: 20px 0;
+	background-color: #2a2d33;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		img {
+			width: 120px;
+			margin-right: 10px;
+			display: block;
+		}
+	}
+	&__text {
+		color: #efefef;
+		line-height: 30px;
+		font-size: 14px;
+		margin-top: 5px;
+		display: flex;
+		align-items: center;
+		span {
+			& + span {
+				font-size: 14px;
+				margin-left: 10px;
+			}
+			font-size: 30px;
+			line-height: 45px;
+		}
+	}
+	&__social {
+		max-width: 81px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		a {
+			display: block;
+			border: solid 2px #454648;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			background-color: #2f3338;
+			transition: all .3s;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				font-family: "icomoon";
+				font-size: 14px;
+				color: #656566;
+				left: 50%;
+				top: 50%;
+				transform: translate(-45%, -50%);
+			}
+			&:hover {
+				border: solid 2px #be393b;
+			}
+			&.footer__social-twitter {
+				&::before {
+					content: "\f099";
+				}
+			}
+			&.footer__social-facebook {
+				&::before {
+					content: "\f09a";
+				}
+			}
+		}
+	}
+}
 
 
 
