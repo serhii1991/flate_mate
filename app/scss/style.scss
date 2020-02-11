@@ -164,10 +164,13 @@
 	color: #fff;
 	padding-top: 80px;
 	&__inner {
-		max-width: 1000px;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 	&__item {
+		max-width: 100%;
+		width: 100%;
+		padding: 0 70px;
 		&-title {
 			font-size: 36px;
 			font-weight: 500;
@@ -183,7 +186,7 @@
 		}
 		&-image {
 			img {
-				max-width: 1000px;
+				max-width: 100%;
 				display: block;
 			}
 		}
